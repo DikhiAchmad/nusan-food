@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:nusanfood/page/home.dart';
 import 'package:nusanfood/page/kategori.dart';
 import 'package:nusanfood/page/favorite.dart';
+import 'package:nusanfood/page/tambah.dart';
+import 'package:nusanfood/page/edit.dart';
+import 'package:nusanfood/page/resep.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -41,6 +44,9 @@ class _HomePageState extends State<HomePage> {
     Home(),
     const Kategori(),
     const Favorite(),
+    const Resep(),
+    const Tambah(),
+    const Edit(),
   ];
 
   @override
@@ -140,6 +146,62 @@ class _HomePageState extends State<HomePage> {
                     )
                   : const Icon(
                       Icons.favorite_outline,
+                      color: Colors.black,
+                      size: 25,
+                    ),
+            ),
+            IconButton(
+              enableFeedback: false,
+              onPressed: () {
+                setState(() {
+                  pageIndex = 3;
+                });
+              },
+              icon: pageIndex == 3
+                  ? const Icon(
+                      Icons.food_bank,
+                      color: Colors.black,
+                      size: 25,
+                    )
+                  : const Icon(
+                      Icons.food_bank_outlined,
+                      color: Colors.black,
+                      size: 25,
+                    ),       
+            ),
+            IconButton(
+              enableFeedback: false,
+              onPressed: () {
+                setState(() {
+                  pageIndex = 4;
+                });
+              },
+              icon: pageIndex == 4
+                  ? const Icon(
+                      Icons.add_box,
+                      size: 25,
+                    )
+                  : const Icon(
+                      Icons.add_box_outlined,
+                      color: Colors.black,
+                      size: 25,
+                    ),
+            ),
+            IconButton(
+              enableFeedback: false,
+              onPressed: () {
+                setState(() {
+                  pageIndex = 5;
+                });
+              },
+              icon: pageIndex == 5
+                  ? const Icon(
+                      Icons.mode_edit,
+                      color: Colors.black,
+                      size: 25,
+                    )
+                  : const Icon(
+                      Icons.mode_edit_outline,
                       color: Colors.black,
                       size: 25,
                     ),

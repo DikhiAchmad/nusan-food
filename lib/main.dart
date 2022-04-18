@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nusanfood/page/home.dart';
+import 'package:nusanfood/login.dart';
+import 'package:nusanfood/register.dart';
 import 'package:nusanfood/page/kategori.dart';
 import 'package:nusanfood/page/favorite.dart';
 import 'package:nusanfood/page/tambah.dart';
 import 'package:nusanfood/page/edit.dart';
 import 'package:nusanfood/page/resep.dart';
+import 'package:nusanfood/pilihan.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
@@ -42,9 +45,12 @@ class _HomePageState extends State<HomePage> {
   int pageIndex = 0;
   final pages = [
     Home(),
+    const register(title: '',),
+    const login(title: '',),
     const Kategori(),
     const Favorite(),
     const Resep(),
+    const pilihan(),
     const Tambah(),
     const Edit(),
   ];
@@ -206,6 +212,27 @@ class _HomePageState extends State<HomePage> {
                       size: 25,
                     ),
             ),
+           IconButton(
+              enableFeedback: false,
+              onPressed: () {
+                setState(() {
+                  pageIndex = 1;
+                });
+              },
+              icon: pageIndex == 1
+                  ? const Icon(
+                      Icons.widgets_rounded,
+                      color: Colors.black,
+                      size: 25,
+                    )
+                  : const Icon(
+                      Icons.widgets_outlined,
+                      color: Colors.black,
+                      size: 25,
+                    ),
+            ),
+            
+          
           ],
         ),
       ),

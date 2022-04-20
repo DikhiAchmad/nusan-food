@@ -62,7 +62,7 @@ class Home extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 alignment: Alignment.topCenter,
-                                image: AssetImage("assets/images/rawon.png"),
+                                image: AssetImage("assets/images/soto.png"),
                                 fit: BoxFit.cover),
                           ),
                           child: null,
@@ -92,7 +92,7 @@ class Home extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 alignment: Alignment.topCenter,
-                                image: AssetImage("assets/images/ayam.png"),
+                                image: AssetImage("assets/images/banner.jpg"),
                                 fit: BoxFit.cover),
                           ),
                           child: null,
@@ -122,7 +122,7 @@ class Home extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 alignment: Alignment.topCenter,
-                                image: AssetImage("assets/images/gudeg.png"),
+                                image: AssetImage("assets/images/banner.jpg"),
                                 fit: BoxFit.cover),
                           ),
                           child: null,
@@ -152,7 +152,7 @@ class Home extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 alignment: Alignment.topCenter,
-                                image: AssetImage("assets/images/lalapan.png"),
+                                image: AssetImage("assets/images/banner.jpg"),
                                 fit: BoxFit.cover),
                           ),
                           child: null,
@@ -182,7 +182,7 @@ class Home extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 alignment: Alignment.topCenter,
-                                image: AssetImage("assets/images/sate.png"),
+                                image: AssetImage("assets/images/banner.jpg"),
                                 fit: BoxFit.cover),
                           ),
                           child: null,
@@ -240,7 +240,7 @@ class Home extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 alignment: Alignment.topCenter,
-                                image: AssetImage("assets/images/nasip.png"),
+                                image: AssetImage("assets/images/banner.jpg"),
                                 fit: BoxFit.cover),
                           ),
                           child: null,
@@ -270,7 +270,67 @@ class Home extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                                 alignment: Alignment.topCenter,
-                                image: AssetImage("assets/images/padang.png"),
+                                image: AssetImage("assets/images/banner.jpg"),
+                                fit: BoxFit.cover),
+                          ),
+                          child: null,
+                        ),
+                        const SizedBox(height: 10),
+                        const Text(
+                          'makanan\njawa',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: null,
+                  child: SizedBox(
+                    width: 175,
+                    height: 200,
+                    child: Column(
+                      children: [
+                        Container(
+                          alignment: Alignment.bottomCenter,
+                          width: 150,
+                          height: 150,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                alignment: Alignment.topCenter,
+                                image: AssetImage("assets/images/banner.jpg"),
+                                fit: BoxFit.cover),
+                          ),
+                          child: null,
+                        ),
+                        const SizedBox(height: 10),
+                        const Text(
+                          'makanan\njawa',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: null,
+                  child: SizedBox(
+                    width: 175,
+                    height: 200,
+                    child: Column(
+                      children: [
+                        Container(
+                          alignment: Alignment.bottomCenter,
+                          width: 150,
+                          height: 150,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                alignment: Alignment.topCenter,
+                                image: AssetImage("assets/images/banner.jpg"),
                                 fit: BoxFit.cover),
                           ),
                           child: null,
@@ -301,66 +361,6 @@ class Home extends StatelessWidget {
                             image: DecorationImage(
                                 alignment: Alignment.topCenter,
                                 image: AssetImage("assets/images/soto.png"),
-                                fit: BoxFit.cover),
-                          ),
-                          child: null,
-                        ),
-                        const SizedBox(height: 10),
-                        const Text(
-                          'makanan\njawa',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: null,
-                  child: SizedBox(
-                    width: 175,
-                    height: 200,
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.bottomCenter,
-                          width: 150,
-                          height: 150,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                alignment: Alignment.topCenter,
-                                image: AssetImage("assets/images/supsang.png"),
-                                fit: BoxFit.cover),
-                          ),
-                          child: null,
-                        ),
-                        const SizedBox(height: 10),
-                        const Text(
-                          'makanan\njawa',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.black, fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: null,
-                  child: SizedBox(
-                    width: 175,
-                    height: 200,
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.bottomCenter,
-                          width: 150,
-                          height: 150,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                alignment: Alignment.topCenter,
-                                image: AssetImage("assets/images/soto babat.png"),
                                 fit: BoxFit.cover),
                           ),
                           child: null,

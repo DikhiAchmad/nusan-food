@@ -10,7 +10,7 @@ KELOMPOK 4
 
 ![login](assets/img/login.png)
 ![register](assets/img/register.png)
-![Home](assets/img/Home.png)
+![Home](assets/img/home.png)
 ![kategori](assets/img/kategori.png)
 ![favorit](assets/img/favorit.png)
 ![pilihan](assets/img/pilihan.png)

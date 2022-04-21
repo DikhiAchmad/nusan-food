@@ -19,10 +19,32 @@ class register extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text("Login".toUpperCase(),
+                    Text("Register".toUpperCase(),
                         style: const TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w900))
                   ],
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 30.0),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      hintText: 'Nama Lengkap',
+                      contentPadding:
+                          const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 30.0),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      hintText: 'Jenis Kelami',
+                      contentPadding:
+                          const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0))),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(bottom: 30.0),
@@ -59,23 +81,13 @@ class register extends StatelessWidget {
                       color: const Color(0xffFF8A00),
                       onPressed: () {},
                       child: const Text(
-                        'Login',
+                        'Register',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
                 ),
-                TextButton(
-                    onPressed: () {},
-                    child: const Padding(
-                      padding: EdgeInsets.all(20),
-                      child: Text("belum punya akun? Register.",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w900)),
-                    ))
               ],
             ),
           ],

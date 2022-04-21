@@ -8,4 +8,13 @@ KELOMPOK 4
 
 ## Tampilan Mockup
 
+![login](assets/img/login.png)
+![register](assets/img/register.png)
+![Home](assets/img/home.png)
+![kategori](assets/img/kategori.png)
+![favorit](assets/img/favorit.png)
+![pilihan](assets/img/pilihan.png)
+![resep](assets/img/resep.png)
+![edit](assets/img/edit.png)
+![tambahkan](assets/img/tambahkan.png)
 ## Hasil Tampilan Flutter

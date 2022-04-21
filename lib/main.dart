@@ -47,14 +47,14 @@ class _HomePageState extends State<HomePage> {
     Home(),
     const Kategori(),
     const Favorite(),
-    const Resep(),
+    const Pilihan(),
     const Tambah(),
     const Edit(),
-    const pilihan(),
+    const Resep(),
     const register(
       title: '',
     ),
-    const Login(
+    Login(
       title: '',
     ),
   ];
@@ -76,19 +76,37 @@ class _HomePageState extends State<HomePage> {
           ),
           backgroundColor: Colors.white,
           actions: <Widget>[
-            GestureDetector(
-              onTap: () {
-                setState(() {
-                  pageIndex = 8;
-                });
-              },
-              child: Container(
-                padding: const EdgeInsets.only(right: 20),
-                child: const Icon(
-                  Icons.account_circle_rounded,
-                  color: Color(0xffFF8A00),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      pageIndex = 8;
+                    });
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: const Icon(
+                      Icons.account_circle_rounded,
+                      color: Color(0xffFF8A00),
+                    ),
+                  ),
                 ),
-              ),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      pageIndex = 7;
+                    });
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: const Icon(
+                      Icons.account_circle_rounded,
+                      color: Color(0xffFF8A00),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ]),
       body: pages[pageIndex],
@@ -224,10 +242,10 @@ class _HomePageState extends State<HomePage> {
               enableFeedback: false,
               onPressed: () {
                 setState(() {
-                  pageIndex = 1;
+                  pageIndex = 6;
                 });
               },
-              icon: pageIndex == 1
+              icon: pageIndex == 6
                   ? const Icon(
                       Icons.widgets_rounded,
                       color: Colors.black,

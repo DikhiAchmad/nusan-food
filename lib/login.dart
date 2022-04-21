@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
-  const Login({Key? key, required this.title}) : super(key: key);
+  Login({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -64,7 +64,17 @@ class Login extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child: const Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Text("belum punya akun? Register.",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w900)),
+                    ))
               ],
             ),
           ],

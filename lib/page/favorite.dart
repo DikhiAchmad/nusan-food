@@ -39,7 +39,7 @@ class Favorite extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image: AssetImage("assets/images/banner.jpg"),
+                            image: AssetImage("assets/images/ayam.png"),
                             fit: BoxFit.cover),
                       ),
                       child: null,
@@ -72,7 +72,7 @@ class Favorite extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image: AssetImage("assets/images/banner.jpg"),
+                            image: AssetImage("assets/images/gudeg.png"),
                             fit: BoxFit.cover),
                       ),
                       child: null,
@@ -105,7 +105,7 @@ class Favorite extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image: AssetImage("assets/images/banner.jpg"),
+                            image: AssetImage("assets/images/lalapan.png"),
                             fit: BoxFit.cover),
                       ),
                       child: null,
@@ -138,7 +138,7 @@ class Favorite extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image: AssetImage("assets/images/banner.jpg"),
+                            image: AssetImage("assets/images/nasip.png"),
                             fit: BoxFit.cover),
                       ),
                       child: null,
@@ -171,7 +171,7 @@ class Favorite extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image: AssetImage("assets/images/banner.jpg"),
+                            image: AssetImage("assets/images/padang.png"),
                             fit: BoxFit.cover),
                       ),
                       child: null,
@@ -204,7 +204,7 @@ class Favorite extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image: AssetImage("assets/images/banner.jpg"),
+                            image: AssetImage("assets/images/rawon.png"),
                             fit: BoxFit.cover),
                       ),
                       child: null,
@@ -237,7 +237,7 @@ class Favorite extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image: AssetImage("assets/images/banner.jpg"),
+                            image: AssetImage("assets/images/sate.png"),
                             fit: BoxFit.cover),
                       ),
                       child: null,
@@ -270,7 +270,7 @@ class Favorite extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image: AssetImage("assets/images/banner.jpg"),
+                            image: AssetImage("assets/images/soto.png"),
                             fit: BoxFit.cover),
                       ),
                       child: null,
@@ -303,7 +303,7 @@ class Favorite extends StatelessWidget {
                       decoration: const BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image: AssetImage("assets/images/banner.jpg"),
+                            image: AssetImage("assets/images/soto babat.png"),
                             fit: BoxFit.cover),
                       ),
                       child: null,

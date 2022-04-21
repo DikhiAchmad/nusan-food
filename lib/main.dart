@@ -45,14 +45,18 @@ class _HomePageState extends State<HomePage> {
   int pageIndex = 0;
   final pages = [
     Home(),
-    const register(title: '',),
-    const login(title: '',),
     const Kategori(),
     const Favorite(),
     const Resep(),
-    const pilihan(),
     const Tambah(),
     const Edit(),
+    const pilihan(),
+    const register(
+      title: '',
+    ),
+    const Login(
+      title: '',
+    ),
   ];
 
   @override
@@ -73,7 +77,11 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.white,
           actions: <Widget>[
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  pageIndex = 8;
+                });
+              },
               child: Container(
                 padding: const EdgeInsets.only(right: 20),
                 child: const Icon(
@@ -173,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                       Icons.food_bank_outlined,
                       color: Colors.black,
                       size: 25,
-                    ),       
+                    ),
             ),
             IconButton(
               enableFeedback: false,
@@ -212,7 +220,7 @@ class _HomePageState extends State<HomePage> {
                       size: 25,
                     ),
             ),
-           IconButton(
+            IconButton(
               enableFeedback: false,
               onPressed: () {
                 setState(() {
@@ -231,8 +239,6 @@ class _HomePageState extends State<HomePage> {
                       size: 25,
                     ),
             ),
-            
-          
           ],
         ),
       ),

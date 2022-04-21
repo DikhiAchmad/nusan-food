@@ -79,7 +79,7 @@ class Kategori extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      'makanan\njawa',
+                      'makanan\nbali',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold),
@@ -112,7 +112,7 @@ class Kategori extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      'makanan\njawa',
+                      'makanan\nsumatera',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold),
@@ -145,7 +145,7 @@ class Kategori extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      'makanan\njawa',
+                      'makanan\nsulawesi',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold),
@@ -178,7 +178,7 @@ class Kategori extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      'makanan\njawa',
+                      'makanan\nkalimantan',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold),
@@ -211,7 +211,7 @@ class Kategori extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      'makanan\njawa',
+                      'makanan\nlombok',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold),

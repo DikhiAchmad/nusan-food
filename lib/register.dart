@@ -40,7 +40,7 @@ class register extends StatelessWidget {
                 ),
                 TextField(
                   decoration: InputDecoration(
-                      hintText: 'Jenis Kelami',
+                      hintText: 'Jenis Kelamin',
                       contentPadding:
                           const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                       border: OutlineInputBorder(

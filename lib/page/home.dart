@@ -99,7 +99,7 @@ class Home extends StatelessWidget {
                         ),
                         const SizedBox(height: 10),
                         const Text(
-                          'makanan\njawa',
+                          'makanan\nbali',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.black, fontWeight: FontWeight.bold),
@@ -129,7 +129,7 @@ class Home extends StatelessWidget {
                         ),
                         const SizedBox(height: 10),
                         const Text(
-                          'makanan\njawa',
+                          'makanan\nsumatera',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.black, fontWeight: FontWeight.bold),

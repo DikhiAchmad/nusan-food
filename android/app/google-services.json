@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "856179087590",
+    "project_id": "nusanfood",
+    "storage_bucket": "nusanfood.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856179087590:android:ac49f6bb7d7e79fc4c0327",
+        "android_client_info": {
+          "package_name": "com.example.nusanfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856179087590-4dprme4l4gcpp77835skfshohbekmav1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nusanfood",
+            "certificate_hash": "a2585729d4f1507cf8d2a194cf603d25cf9eb12e"
+          }
+        },
+        {
+          "client_id": "856179087590-v20d84uoanckdu961198bvjjklk43ubk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKhrxU3sxaRCuDJ2kFYxTs6DsWdtSCRWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856179087590-v20d84uoanckdu961198bvjjklk43ubk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

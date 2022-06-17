@@ -1,8 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nusanfood/firebase/sign_in.dart';
+import 'package:nusanfood/page/favorite.dart';
+import 'package:nusanfood/page/kategori.dart';
 import 'package:nusanfood/page/login.dart';
+import 'package:nusanfood/page/pilihan.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:nusanfood/widget/kategori-widget.dart';
+import 'package:nusanfood/widget/rekomendasi-widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -28,7 +33,15 @@ class HomeScreen extends StatelessWidget {
               Row(
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const Favorite();
+                          },
+                        ),
+                      );
+                    },
                     child: Container(
                       padding: const EdgeInsets.only(right: 20),
                       child: const Icon(
@@ -79,13 +92,21 @@ class HomeScreen extends StatelessWidget {
                     top: 10, left: 20, right: 20, bottom: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text('Kategori',
+                  children: <Widget>[
+                    const Text('Kategori',
                         style: TextStyle(
                             color: Colors.black, fontWeight: FontWeight.bold)),
                     TextButton(
-                      onPressed: null,
-                      child: Text('view all',
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const Kategori();
+                            },
+                          ),
+                        );
+                      },
+                      child: const Text('view all',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold)),
@@ -93,187 +114,27 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(bottom: 20),
-                height: 220.0,
-                width: 200,
-                child: ListView(
-                  // This next line does the trick.
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image: AssetImage("assets/images/soto.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\njawa',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image:
-                                        AssetImage("assets/images/rawon.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\nbali',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image:
-                                        AssetImage("assets/images/gudeg.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\nsumatera',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image:
-                                        AssetImage("assets/images/lalapan.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\njawa',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image: AssetImage("assets/images/sate.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\njawa',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              const KategoriWidget(),
               Container(
                 margin: const EdgeInsets.only(
                     top: 10, left: 20, right: 20, bottom: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text('Rekomendasi',
+                  children: <Widget>[
+                    const Text('Makanan',
                         style: TextStyle(
                             color: Colors.black, fontWeight: FontWeight.bold)),
                     TextButton(
-                      onPressed: null,
-                      child: Text('view all',
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const Pilihan();
+                            },
+                          ),
+                        );
+                      },
+                      child: const Text('view all',
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold)),
@@ -281,209 +142,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(bottom: 30),
-                height: 220.0,
-                child: ListView(
-                  // This next line does the trick.
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image:
-                                        AssetImage("assets/images/nasip.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\njawa',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image: AssetImage("assets/images/soto.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\njawa',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image:
-                                        AssetImage("assets/images/supsang.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\njawa',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image:
-                                        AssetImage("assets/images/padang.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\njawa',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: null,
-                      child: SizedBox(
-                        width: 175,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              width: 150,
-                              height: 150,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                    alignment: Alignment.topCenter,
-                                    image: AssetImage("assets/images/soto.png"),
-                                    fit: BoxFit.cover),
-                              ),
-                              child: null,
-                            ),
-                            const SizedBox(height: 10),
-                            const Text(
-                              'makanan\njawa',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              const RekomendasiWidget(),
             ],
           ),
         ));
   }
 }
-
-// Padding(
-//         padding: const EdgeInsets.all(32),
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             const Text(
-//               'Signed In as',
-//               style: TextStyle(fontSize: 16),
-//             ),
-//             const SizedBox(height: 8),
-//             Text(
-//               user.email!,
-//               style: const TextStyle(
-//                 fontSize: 20,
-//                 fontWeight: FontWeight.bold,
-//               ),
-//             ),
-//             const SizedBox(height: 40),
-//             ElevatedButton.icon(
-//               style: ElevatedButton.styleFrom(
-//                 minimumSize: const Size.fromHeight(50),
-//               ),
-//               icon: const Icon(Icons.arrow_back, size: 32),
-//               label: const Text(
-//                 'Sign Out',
-//                 style: TextStyle(fontSize: 24),
-//               ),
-//               onPressed: () => FirebaseAuth.instance.signOut(),
-//             ),
-//           ],
-//         ),
-//       ),

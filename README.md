@@ -30,3 +30,15 @@ KELOMPOK 4
 ![resep](assets/Hasil/resep.png)
 ![edit](assets/Hasil/edit.png)
 ![tambahkan](assets/Hasil/tambah.png)
+
+## UAS
+![login](assets/img/1.png)
+![register](assets/img/2.png)
+![Home](assets/img/3.png)
+![kategori](assets/img/4.png)
+![favorit](assets/img/5.png)
+![pilihan](assets/img/6.png)
+![resep](assets/img/7.png)
+![edit](assets/img/8.png)
+![tambahkan](assets/img/9.png)
+![favorit](assets/img/10.png)

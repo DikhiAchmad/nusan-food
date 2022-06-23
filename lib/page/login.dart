@@ -5,6 +5,7 @@ import 'package:nusanfood/firebase/sign_in.dart';
 import 'package:nusanfood/main.dart';
 import 'package:nusanfood/page/homepage.dart';
 import 'package:nusanfood/page/register.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -16,13 +17,6 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  @override
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
-
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +87,8 @@ class _LoginPageState extends State<LoginPage> {
                 const Padding(
                   padding: EdgeInsets.only(bottom: 20.0),
                 ),
-                _signInButton(),
+                // sign in google
+                _signInGoogleButton(),
                 TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -118,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
     ));
   }
 
-  Widget _signInButton() {
+  Widget _signInGoogleButton() {
     return OutlineButton(
       splashColor: Colors.grey,
       onPressed: () {
@@ -162,21 +157,30 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Future signIn() async {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) => const Center(
-        child: CircularProgressIndicator(),
-      ),
-    );
-
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: emailController.text.trim(),
-        password: passwordController.text.trim(),
+        email: emailController.text,
+        password: passwordController.text,
       );
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const HomeScreen()));
+      final _user = FirebaseFirestore.instance
+          .collection('user')
+          .doc(FirebaseAuth.instance.currentUser?.email);
+
+      final json = {
+        "last_login": DateTime.now(),
+      };
+
+      await _user.update(json);
+
+      return null;
     } on FirebaseAuthException catch (e) {
-      print(e);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(e.toString()),
+        ),
+      );
     }
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }

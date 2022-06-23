@@ -8,14 +8,17 @@ import 'package:nusanfood/firebase/sign_in.dart';
 import 'package:nusanfood/page/login.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Pilihan extends StatelessWidget {
-  const Pilihan({Key? key}) : super(key: key);
-
+class ResultSearch extends StatelessWidget {
+  const ResultSearch({Key? key, required this.search}) : super(key: key);
+  final String search;
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
-    final Stream<QuerySnapshot> _makanan =
-        FirebaseFirestore.instance.collection('makanan').snapshots();
+
+    final Stream<QuerySnapshot> _makanan = FirebaseFirestore.instance
+        .collection('makanan')
+        .where('nama_makanan', isEqualTo: search)
+        .snapshots();
 
     return Scaffold(
       appBar: AppBar(
@@ -86,7 +89,7 @@ class Pilihan extends StatelessWidget {
             ),
           );
         },
-        backgroundColor: const Color(0xffFF8A00),
+        backgroundColor: Color(0xffFF8A00),
         tooltip: '',
         child: const Icon(Icons.add),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nusanfood/page/kategori-search.dart';
 import 'package:nusanfood/widget/categories-widget.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -105,7 +106,16 @@ class Kategori extends StatelessWidget {
                         return Container(
                           alignment: Alignment.center,
                           child: TextButton(
-                            onPressed: null,
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return SearchByKategori(
+                                        kategori: data['nama_kategori']);
+                                  },
+                                ),
+                              );
+                            },
                             child: SizedBox(
                               width: 175,
                               height: 200,

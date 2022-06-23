@@ -37,7 +37,9 @@ class RekomendasiWidget extends StatelessWidget {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) {
-                              return const Resep();
+                              return Resep(
+                                dokumenid: document.id.toString(),
+                              );
                             },
                           ),
                         );
@@ -78,4 +80,8 @@ class RekomendasiWidget extends StatelessWidget {
       },
     );
   }
+
+  // Future<void> deleteData(DocumentSnapshot doc) async {
+  //   await FirebaseFirestore.instance.collection('makanan').doc(doc.id).delete();
+  // }
 }

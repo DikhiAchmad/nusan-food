@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:nusanfood/page/kategori-search.dart';
 
 class KategoriWidget extends StatelessWidget {
   const KategoriWidget({
@@ -32,7 +33,16 @@ class KategoriWidget extends StatelessWidget {
                   Map<String, dynamic> data =
                       document.data()! as Map<String, dynamic>;
                   return TextButton(
-                      onPressed: null,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return SearchByKategori(
+                                  kategori: data['nama_kategori']);
+                            },
+                          ),
+                        );
+                      },
                       child: SizedBox(
                         width: 175,
                         height: 200,

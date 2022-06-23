@@ -5,6 +5,7 @@ import 'package:nusanfood/page/favorite.dart';
 import 'package:nusanfood/page/kategori.dart';
 import 'package:nusanfood/page/login.dart';
 import 'package:nusanfood/page/pilihan.dart';
+import 'package:nusanfood/page/result-serach.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:nusanfood/widget/kategori-widget.dart';
 import 'package:nusanfood/widget/rekomendasi-widget.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
-
+    TextEditingController searchController = TextEditingController();
     return Scaffold(
         appBar: AppBar(
             elevation: 0,
@@ -76,8 +77,18 @@ class HomeScreen extends StatelessWidget {
             children: [
               Container(
                 margin: const EdgeInsets.all(20),
-                child: TextField(
-                  // controller: searchController,
+                child: TextFormField(
+                  controller: searchController,
+                  textInputAction: TextInputAction.go,
+                  onFieldSubmitted: (value) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ResultSearch(search: searchController.text);
+                        },
+                      ),
+                    );
+                  },
                   decoration: InputDecoration(
                     hintText: 'Search',
                     contentPadding:

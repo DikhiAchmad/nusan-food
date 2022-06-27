@@ -6,6 +6,10 @@ KELOMPOK 4
 2.Dikhi Achmad Dani<br>
 3.Rosita Ayu Tri Lestari
 
+Link Figma : https://www.figma.com/file/WRv8C1eBcxnAcOTNi9qUSA/tugas-deisgn-flutter?node-id=0%3A1
+<br>
+Link Firestore : https://console.firebase.google.com/u/0/project/nusanfood/firestore/data/~2Fkategori~2F0eYjahsjYER3exMavfbr
+
 ## Tampilan Mockup
 
 ![login](assets/img/login.png)
@@ -42,3 +46,7 @@ KELOMPOK 4
 ![edit](assets/img/8.png)
 ![tambahkan](assets/img/9.png)
 ![favorit](assets/img/10.png)
+## FIRESTORE
+![firestore](assets/firestore/FIRESTORE1.png)
+![firestore](assets/firestore/FIRESTORE2.png)
+![firestore](assets/firestore/FIRESTORE3.png)

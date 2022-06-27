@@ -57,23 +57,133 @@ class Resep extends StatelessWidget {
                   const Padding(padding: EdgeInsets.only(left: 5, right: 5)),
                   GestureDetector(
                     onTap: () {
-                      signOutGoogle();
-                      Navigator.of(context).pushAndRemoveUntil(
-                          MaterialPageRoute(builder: (context) {
-                        return const LoginPage();
-                      }), ModalRoute.withName('/'));
+                      showDialog<String>(
+                        context: context,
+                        builder: (BuildContext context) => AlertDialog(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          title: const Text(
+                            'Log out',
+                            style: TextStyle(
+                              fontFamily: 'Raleway',
+                              fontSize: 24,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xff3F3F3F),
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          content: const Text(
+                            'Are you sure?',
+                            style: TextStyle(
+                              fontFamily: 'Raleway',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff3F3F3F),
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          actions: <Widget>[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Container(
+                                      width: 60,
+                                      height: 50,
+                                      margin: const EdgeInsets.only(
+                                        bottom: 20,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: const Color(0xffFF8A00),
+                                          width: 1,
+                                        ),
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: const [
+                                          Text(
+                                            'No',
+                                            style: TextStyle(
+                                              fontFamily: 'Raleway',
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w600,
+                                              color: Color(0xff3F3F3F),
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ],
+                                      )),
+                                ),
+                                const SizedBox(width: 16),
+                                InkWell(
+                                  onTap: () {
+                                    signOutGoogle();
+                                    Navigator.of(context).pushAndRemoveUntil(
+                                        MaterialPageRoute(builder: (context) {
+                                      return const LoginPage();
+                                    }), ModalRoute.withName('/'));
+                                  },
+                                  child: Container(
+                                      width: 60,
+                                      height: 50,
+                                      margin: const EdgeInsets.only(
+                                        bottom: 20,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(15),
+                                        color: const Color(0xffFF8A00),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: const [
+                                          Text(
+                                            'Yes',
+                                            style: TextStyle(
+                                              fontFamily: 'Raleway',
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w600,
+                                              color: Color(0xff3F3F3F),
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ],
+                                      )),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      );
+
+                      child:
+                      Row(
+                        children: const [
+                          Icon(Icons.logout, size: 35),
+                          SizedBox(width: 16),
+                          Text(
+                            'Log out',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontFamily: 'Raleway',
+                              color: Color.fromARGB(255, 82, 82, 82),
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                        ],
+                      );
                     },
-                    child: Container(
-                      padding: const EdgeInsets.only(right: 20),
-                      child: const Icon(
-                        Icons.door_back_door_outlined,
-                        color: Color.fromARGB(255, 255, 0, 0),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ]),
+                ),
+              ],
+            ),
+          ]),
         floatingActionButton:
             Column(mainAxisAlignment: MainAxisAlignment.end, children: [
           FloatingActionButton(
